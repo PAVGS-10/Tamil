@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* for the pen */
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background-image: url(bgg.jpg);
+  background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+    color: rgb(0, 13, 24);
+}
+
+/* waves */
+.ocean {
+  height: 90px; /* change the height of the waves here */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.wave {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23007F7C'/%3E%3C/svg%3E");
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  z-index: 8;
+}
+
+.wave:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.5;
+}
+
+.wave:nth-of-type(3) {
+  bottom: 0;
+  animation: wave 20s -1s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-25%);}
+    100% {transform: translateX(-50%);}
+}
+.sideleft{
+    z-index: 8;
+    position: fixed;
+    margin-left:-10px;
+    margin-top: -8px;
+    height: 750px;
+    width: 210px;
+}
+.sideright{
+    z-index: 8;
+    position: fixed;
+    margin-left: 1150px;
+    margin-top: -8px;
+    height: 750px;
+    width: 210px;  
+}
+.sright{
+    background-image: url(bgb.jpg);
+    border: yellow 2px solid;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes ship{
+    0%{
+        transform: rotate(0deg)translateY(0);
+
+    }
+    25%{
+        transform: rotate(-1deg)translateY(-3px);
+    }
+    50%{
+        transform: rotate(0deg)translateY(-5px);
+    }
+    75%{
+        transform: rotate(1deg)translateY(-3px);
+    }
+    100%{
+        transform: rotate(1deg)translateY(0);
+
+    }
+}
+@keyframes ship1{
+    0%{
+        transform: rotate(0deg)translateY(0);
+
+    }
+    25%{
+        transform: rotate(-1deg)translateY(-2px);
+    }
+    50%{
+        transform: rotate(0deg)translateY(-3px);
+    }
+    75%{
+        transform: rotate(10deg)translateY(-2px);
+    }
+    100%{
+        transform: rotate(1deg)translateY(0);
+
+    }
+}
+.ship{
+    z-index: 8;
+    width: 200px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: ship 1.5s linear infinite;
+}
+.ship1{
+    z-index: 8;
+    width: 1050px;
+    position: absolute;
+    bottom: 50px;
+    left: 9%;
+    transform: translateX(-40%);
+    animation: ship 1.5s linear infinite;
+}
+.ship1 img
+{
+    width: 200px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+
+.ship img
+{
+    width: 100%;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+/*karikala images*/
+.king1{
+    width: 1050px;
+    position: absolute;
+    bottom: 158px;
+    left: 27%;
+    z-index: 5;
+    
+}
+.king1 img
+{
+    width: 60px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+/*karikala images*/
+/*paddyfield*/
+.paddyfield1{
+    width: 1050px;
+    position: absolute;
+    bottom: 130px;
+    left: 20%;
+    z-index: 1;
+    
+}
+.paddyfield1 img
+{
+    width: 1000px;
+    height: 600px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+/*periya temple images*/
+.temp1{
+    width: 1050px;
+    position: absolute;
+    bottom: 200px;
+    left: 72%;
+    z-index: 3;
+    
+}
+.temp1 img
+{
+    width: 200px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+/*periya temple images*/
+/*elephant images*/
+.elephant1{
+    width: 1050px;
+    position: absolute;
+    bottom: 200px;
+    left: 20%;
+    right: 40%;
+    z-index: 3;
+    
+}
+.elephant1 img
+{
+    width: 60px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+.stone1{
+    width: 800px;
+    position: absolute;
+    bottom: 202px;
+    left: 17%;
+    right: 37%;
+    z-index: 2;
+    
+}
+.stone1 img
+{
+    width: 60px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+/*elephant images*/
+/*birds */
+.bird1{
+    width: 1220px;
+    position: absolute;
+    
+    bottom: 350px;
+    left: 0%;
+    z-index: 7;
+    
+}
+.bird1 img
+{
+    width: 50px;
+    height: 40px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+.bird2{
+    width: 1220px;
+    position: absolute;
+    bottom: 360px;
+    left: 3%;
+    z-index: 6;
+    
+}
+.bird2 img
+{
+    width: 50px;
+    height: 40px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+.bird3{
+    width: 1220px;
+    position: absolute;
+    bottom: 375px;
+    left: 0%;
+    z-index: 6;
+    
+}
+.bird3 img
+{
+    width: 50px;
+    height: 40px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+/*birds */
+/*river*/
+.river{
+    width: 1050px;
+    position: absolute;
+    bottom: 113px;
+    left: 10%;
+    z-index: 4;
+    
+}
+.river img
+{
+    width: 300px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+/*river end*/
+.dam{
+    width: 1050px;
+    position: absolute;
+    bottom: 150px;
+    left: 5%;
+    z-index: 5;
+    
+}
+.dam img
+{
+    width: 200px;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.5));
+}
+/*dam end*/
+.beach{
+
+z-index: 2;
+    width: 400px;
+    position: absolute;
+    left: 43%;
+    bottom: 70px;
+}
+.beach img{
+    margin-top: 430px;
+    margin-left: 0%;
+    height: 150px;
+    width: 700px;
+}
+.ocean1{
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0px;
+    z-index: 7;
+}
+.ocean1 img{
+    margin-top: -130px;
+    margin-left: 0%;
+    height: 180px;
+    width: 1500px;
+}
+.audio{
+    border: none;
+    background-color: rgb(221, 236, 11);
+    border-radius: 70%;
+    margin-left:78%;
+    position: absolute;
+    margin-top: 20px;
+}
+.audioun{
+    border: none;
+    background-color: rgb(221, 236, 11);
+    border-radius: 70%;
+    margin-left:80%;
+    position: absolute;
+    margin-top: 20px;
+}
+.adesigns{
+    display: inline;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="adesigns"> <button class="audio" onclick="disableMute()" type="button"> <i class="fa-solid fa-volume-high"></i></button> <button class="audioun" onclick="enableMute()" type="button"><i class="fa-solid fa-volume-xmark"></i></button>  </div>  
+    
+    <img class="sideleft" src="side left.png"/> 
+    <img class="sideright" src="side right.png"/> 
+    <div style="visibility:hidden">
+        <audio id="myVideo" class="audio" autoplay loop>
+            <source src="bgm.mp3">
+        </audio> 
+    </div>
+  
+
+    <!--ship animation-->
+    <div class="sright">
+      <div class="ship">
+        <img src="ancship.png" alt="">
+    </div>
+    <!--2nd ship moves left to right-->
+    <div class="ship1">
+        <marquee behavior="slide" direction="right" scrollamount="2"  ><img src="ancship2.png" alt=""></marquee>
+    </div>
+    <!--periya kovil-->
+    <div class="temp1">
+        <img src="periya temple.png" alt="karikalan--">
+    </div>
+    <!--king karikalan-->
+    <div class="king1">
+        <img src="karkalanleft.png" alt="karikalan--">
+    </div>
+    <!--elephant images-->
+    <div class="elephant1">
+        <marquee behavior="slide" direction="right" scrollamount="2.8"  > <img src="elephant.gif" alt="karikalan--"> </marquee>
+    </div>
+    <div class="stone1">
+        <marquee behavior="slide" direction="right" scrollamount="2.8"  ><img src="stone.png" alt="karikalan--"></marquee>
+    </div>
+    <!--paddy field-->
+    <div class="paddyfield1">
+        <img src="paddyfield.png" alt="karikalan--">
+    </div>
+    <!--bird images-->
+    <div class="bird1">
+        <marquee behavior="slide" direction="left" scrollamount="2"  > <img src="bird1.gif" alt="karikalan--"></marquee> 
+    </div>
+    <div class="bird2">
+        <marquee behavior="slide" direction="left" scrollamount="2"  > <img src="bird1.gif" alt="karikalan--"></marquee> 
+    </div>
+    <div class="bird3">
+        <marquee behavior="slide" direction="left" scrollamount="2"  > <img src="bird1.gif" alt="karikalan--"></marquee> 
+    </div>
+    <!--dam image-->
+    <div class="dam">
+        <img src="dam.png" alt="dam">
+    </div>
+    <!--river image-->
+    <div class="river">
+        <img src="river.png" alt="river">
+    </div>
+    <!--beach images-->
+    <div class="beach">
+    <img src="beach1.png" alt="beach">
+</div>
+<!--ocean image-->
+<div class="ocean1">
+    <img src="ocean.png" alt="ocean1">
+</div>
+    <!--waves animation-->
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+       
+      </div>
+    </div>
+      <!--waves animation ended-->
+      <!--scripts-->
+      <script>
+        var vid = document.getElementById("myVideo");
+        
+        function enableMute() { 
+          vid.muted = true;
+        } 
+        
+        function disableMute() { 
+          vid.muted = false;
+        } 
+        
+        function checkMute() { 
+          alert(vid.muted);
+        } 
+        </script> 
+        <script src="https://kit.fontawesome.com/d2f4537413.js" crossorigin="anonymous"></script>
+        
+</body>
+</html>
